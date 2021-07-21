@@ -16,10 +16,10 @@
         <PerGrammarGenerationSettings>
           <option name="fileName" value="$PROJECT_DIR$/src/org/angelon/Angelon.g4" />
           <option name="autoGen" value="true" />
-          <option name="outputDir" value="$PROJECT_DIR$/src" />
+          <option name="outputDir" value="" />
           <option name="libDir" value="" />
           <option name="encoding" value="" />
-          <option name="pkg" value="org.angelon.checker" />
+          <option name="pkg" value="" />
           <option name="language" value="" />
           <option name="generateVisitor" value="true" />
         </PerGrammarGenerationSettings>
