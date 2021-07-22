@@ -1,6 +1,13 @@
 grammar Angelon;
 
+import Dent;
+
 tokens { Indent, Dedent }
+
+@lexer::members {
+	private int INDENT_TOKEN = AngelonParser.Indent;
+	private int DEDENT_TOKEN = AngelonParser.Dedent;
+}
 
 singleInput
  : NewLine
@@ -98,7 +105,7 @@ augAssign
  : '+=' 
  | '-=' 
  | '*=' 
- | '@=' // PEP 465
+ | '@='
  | '/=' 
  | '%=' 
  | '&=' 
@@ -490,7 +497,7 @@ Pass : 'pass';
 Continue : 'continue';
 Break : 'break';
 
-NewLine : ( '\r'? '\n' | '\r' | '\f' ) Spaces?;
+// NewLine : ( '\r'? '\n' | '\r' | '\f' ) Spaces?;
 
 Symbol
  : IdStart IdContinue*
@@ -688,10 +695,6 @@ fragment LongBytesChar
 
 fragment BytesEscapeSeq
  : '\\' [\u0000-\u007F]
- ;
-
-fragment Spaces
- : [ \t]+
  ;
 
 fragment Comment

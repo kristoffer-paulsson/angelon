@@ -1,0 +1,10 @@
+from angelon.collections import ByteArray
+import angelon.builtins as test
+
+class HelloWorld(ByteArray):
+    """Test class."""
+
+    lambda x: None
+
+    def __init__(self) -> True if 1 else False:
+        pass
